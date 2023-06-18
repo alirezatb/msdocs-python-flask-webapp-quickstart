@@ -8,6 +8,10 @@ jobs:
         run: echo "Hello pyhon  app"
       - name: Print Goodbye
         run: echo "good bye"
+      - name: Print multiple line
+        run: |
+          echo " first of 2"
+          echo "second of 2"
       
   
 
