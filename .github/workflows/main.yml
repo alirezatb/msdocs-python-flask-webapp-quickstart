@@ -1,5 +1,5 @@
 name: python flask web app workflow
-on: workflow_disptach # to manually run a workflow
+on: workflow_dispatch # to manually run a workflow
 jobs:
   first_job:
     runs-on: ubuntu-latest
