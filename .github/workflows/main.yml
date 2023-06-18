@@ -1,0 +1,28 @@
+name: publish flask webapp
+
+on:
+  workflow_dispatch:
+  push:
+    env:
+      flask_app_dir: msdocs-python-flask-webapp-quickstart
+    branches:
+    - development
+
+jobs:
+  publish-flask-app:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout flask app repository
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2  
+    - run: pip install -r requirements.txt  # install requirements to enable GitHub run tests
+    - run:  python app.py
+      
+#       with:
+#         repository: alirezatb/msdocs-python-flask-webapp-quickstart
+#         tokens: ${{secrets.GITHUB_TOKEN}}
+#         path: $${{env.flask_app_dir}}
+        
+
+        
+    
